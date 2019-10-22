@@ -9,8 +9,8 @@ import (
 	"path"
 	"testing"
 
-	"github.com/covrom/hls-streamer/manifestgenerator/hls"
-	"github.com/covrom/hls-streamer/manifestgenerator/mediachunk"
+	"github.com/covrom/hls-streamer/hls"
+	"github.com/covrom/hls-streamer/mediachunk"
 )
 
 func parseHexString(h string) []byte {
