@@ -35,7 +35,7 @@ func HTTPServer(baseOutPath, chunkListFilename, serveHttpAddr string, log *logru
 				</body>
 			</html>`))
 	})
-	http.Handle("/video/", http.StripPrefix("/video/", fs))
+	http.Handle("/video/", NoCache(http.StripPrefix("/video/", fs)))
 
 	go http.ListenAndServe(serveHttpAddr, nil)
 
