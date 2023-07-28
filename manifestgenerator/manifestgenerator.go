@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"path"
 
-	"github.com/sirupsen/logrus"
 	"github.com/covrom/hls-streamer/hls"
 	"github.com/covrom/hls-streamer/mediachunk"
 	"github.com/covrom/hls-streamer/tspacket"
+	"github.com/sirupsen/logrus"
 )
 
 // Version Indicates the package version
@@ -583,7 +583,7 @@ func (mg *ManifestGenerator) nextChunk(currentPCRS float64, lastInitialPCRS floa
 	return
 }
 
-// Close Closes manigest processing saving last data and last chunk
+// Close Closes ManifestGenerator processing, saving last data and last chunk
 func (mg *ManifestGenerator) Close() {
 	//Generate last chunk
 	mg.nextChunk(mg.lastPCRS, mg.chunkStartTimeS, tspacket.MaxPCRSValue, true)

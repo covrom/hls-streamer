@@ -214,7 +214,7 @@ func (p *Hls) AddChunk(chunkData Chunk, saveChunklist bool) error {
 	return ret
 }
 
-// addChunk Adds a new chunk
+// String write info to chunklist.m3u8
 func (p *Hls) String() string {
 	var buffer bytes.Buffer
 
